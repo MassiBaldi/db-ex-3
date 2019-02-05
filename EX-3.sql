@@ -26,7 +26,7 @@ Quanti posti letto ha l’hotel in totale?
 SELECT SUM(`beds`) FROM `stanze`
 
 Le stanze sono state tutte prenotate almeno una volta?
-SELECT COUNT(ID) AS 'Prenotazioni per Stanza', stanza_id AS 'Stanza' FROM prenotazioni GROUP BY stanza_id
+SELECT COUNT(ID) AS 'Prenotazioni per Stanza', `stanza_id` AS 'Stanza' FROM `prenotazioni` GROUP BY `stanza_id`
 
 Group by
 
@@ -37,6 +37,6 @@ Conta quante volte è stata prenotata ogni stanza
 SELECT COUNT(ID) AS `prenotazioni per stanza`, `stanza_id` AS `numero stanza` FROM `prenotazioni` GROUP BY `stanza_id`
 
 Fai una analisi per vedere se ci sono ore in cui le prenotazioni sono più frequenti
-SELECT COUNT(ID) AS 'N prenotazioni', HOUR(created_at) AS 'ora prenotazione' FROM prenotazioni GROUP BY HOUR(created_at)
+SELECT COUNT(ID) AS 'N prenotazioni', HOUR(`created_at`) AS 'ora prenotazione' FROM `prenotazioni` GROUP BY HOUR(`created_at`)
 
 Quante prenotazioni ha fatto l’ospite che ha fatto più prenotazioni?
